@@ -74,8 +74,15 @@ if (typeof TextEncoder === 'undefined') {
 }
 
 // Configure CORS
-app.use(cors());
+// app.use(cors());
 
+const corsOptions = {
+    origin: 'https://multiconverthub.netlify.app', // Replace with your actual Netlify URL
+    optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+  };
+  
+  app.use(cors(corsOptions));
+  
 // Add a simple GET route for testing
 app.get('/', (req, res) => {
   res.send('Backend is running!');
