@@ -77,7 +77,7 @@ if (typeof TextEncoder === 'undefined') {
 // app.use(cors());
 
 const corsOptions = {
-    origin: 'https://multiconverthub.netlify.app', // Replace with your actual Netlify URL
+    origin: '*',
     optionsSuccessStatus: 200 // Some legacy browsers choke on 204
   };
   
